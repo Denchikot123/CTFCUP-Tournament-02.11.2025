@@ -78,10 +78,15 @@ Write-up CTFCUP 02.11.2025
 
 **Реализация ключевой идеи перебора**:
 
-    for time_seed in range(100000):
-      decrypted = decrypt(encrypted_data, time_seed)
-      if decrypted.startswith("Your flag is: ctfcup{"):
-        break
+    for time_seed in range(0, 100000):
+    try:
+        decrypted = crypto.decrypt(encrypted_data, time_seed)
+        if decrypted.startswith(b'Your flag is: ctfcup{'):
+            print(f"Found time_seed: {time_seed}")
+            print(decrypted.decode())
+            break
+    except:
+        pass
 
 Для перебора будем использовать 100000 значений time_seed, так как в исходном коде использовалось именно это число, что позволит нам покрыть все возможные случаи
 Мы изначально уже знаем формат флага ( ctfcup{ ), соответственно добавляем данный формат в вывод, что позволит нам получить уже готовый флаг
@@ -179,10 +184,15 @@ To decrypt layer 1, we need a "mirror" table that will perform the reverse opera
 -----------------
 **Implementation of the key idea of ​​the enumeration**:
 
-    for time_seed in range(100000):
-      decrypted = decrypt(encrypted_data, time_seed)
-      if decrypted.startswith("Your flag is: ctfcup{"):
-        break
+    for time_seed in range(0, 100000):
+    try:
+        decrypted = crypto.decrypt(encrypted_data, time_seed)
+        if decrypted.startswith(b'Your flag is: ctfcup{'):
+            print(f"Found time_seed: {time_seed}")
+            print(decrypted.decode())
+            break
+    except:
+        pass
 
 For the enumeration, we will use 100,000 time_seed values, since this is the number used in the original code, which will allow us to cover all possible cases.
 We already know the flag format ( ctfcup{ ), so we add this format to the output, which will allow us to obtain a ready-made flag.
