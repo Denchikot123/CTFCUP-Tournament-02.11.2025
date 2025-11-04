@@ -4,7 +4,7 @@ Write-up CTFCUP 02.11.2025
 [RUS] Решение задания из категории Crypto в CTFCUP 02.11.2025
 -
 
-В задани нам было предоставлено 2 файла (task.py, task.txt) и необходимо было попытаться расшифровать исходный текст с помощью мастера ключа путем изменения кода на дешифровку. В одном из них был код на языке Python, в другом предоставлен зашифрованный текст и мастер-ключ.
+В задани нам было предоставлено 2 файла (task.py, task_data.txt) и необходимо было попытаться расшифровать исходный текст с помощью мастера ключа путем изменения кода на дешифровку. В одном из них был код на языке Python, в другом предоставлен зашифрованный текст и мастер-ключ.
 
 Начнем с анализа программы Python.
 
@@ -107,7 +107,7 @@ Write-up CTFCUP 02.11.2025
 
 [ENG] Solution to a Crypto assignment in CTFCUP, November 2, 2025
 -
-In the assignment, we were given two files (task.py, task.txt) and had to attempt to decrypt the original text using a master key by changing the decryption code. One of them contained Python code, while the other contained the encrypted text and the master key.
+In the assignment, we were given two files (task.py, task_data.txt) and had to attempt to decrypt the original text using a master key by changing the decryption code. One of them contained Python code, while the other contained the encrypted text and the master key.
 
 Let's start by analyzing the Python program.
 
