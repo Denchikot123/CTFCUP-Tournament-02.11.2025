@@ -1,4 +1,3 @@
-# Запустите этот код - он найдет флаг за 1-2 минуты
 import base64
 import hashlib
 import random
@@ -76,4 +75,5 @@ for time_seed in range(0, 100000):
             print(decrypted.decode())
             break
     except:
+
         pass
